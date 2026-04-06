@@ -27,8 +27,8 @@ Initial analysis revealed that the **open-loop system is unstable**, motivating 
 
 ### Degrees of Freedom
 
-* Position: x, y, z
-* Orientation: roll (ϕ), pitch (θ), yaw (ψ)
+* Position: x, z
+* Orientation: θ 
 
 ### Control Inputs
 
