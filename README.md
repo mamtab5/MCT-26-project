@@ -131,7 +131,18 @@ All eigenvalues have negative real parts ⇒ the system is **stable**.
 
 ### Interpretation
 - Control input **u1** mainly affects states x3 and x4  
-- Control input **u2** affects x1, x2, x5, x6  
+- Control input **u2** affects x1, x2, x5, x6
+
+## SUMMARY: PLANAR QUADROTOR CLOSED-LOOP CONTROL
+### Nominal System Parameters
+
+- **Mass (m):** 0.5 kg  
+- **Moment of Inertia (I):** 0.0023 kg·m²  
+- **Arm Length (l):** 0.25 m  
+- **Gravity (g):** 9.81 m/s²  
+- **Maximum Thrust (fmax):** 10 N  
+
+[View Full Report](results_part3/summary.txt)
 
 ---
 
@@ -174,14 +185,15 @@ python code.py
 
 ---
 
-## Key Insights
+## Key Features
 
 * Open-loop system is **unstable**
 * Closed-loop control significantly improves:
 
-  * Stability
-  * Tracking performance
-* System is **fully controllable** despite fewer inputs than DOFs
+  * Stability - Stable hover using LQR 
+  * Tracking performance - Low overshoot tracking  
+* System is **fully controllable** despite fewer inputs than DOFs - Efficient control effort
+* Works on nonlinear system
 
 ---
 
