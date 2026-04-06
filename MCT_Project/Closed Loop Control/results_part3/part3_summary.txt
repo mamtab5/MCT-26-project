@@ -1,0 +1,79 @@
+===================================================
+PART 3 SUMMARY: PLANAR QUADROTOR CLOSED-LOOP CONTROL
+===================================================
+
+Nominal parameters:
+  m = 0.5
+  I = 0.0023
+  l = 0.25
+  g = 9.81
+  fmax = 10.0
+
+A matrix:
+[[ 0.    1.    0.    0.    0.    0.  ]
+ [ 0.    0.    0.    0.   -9.81  0.  ]
+ [ 0.    0.    0.    1.    0.    0.  ]
+ [ 0.    0.    0.    0.    0.    0.  ]
+ [ 0.    0.    0.    0.    0.    1.  ]
+ [ 0.    0.    0.    0.    0.    0.  ]]
+
+B matrix:
+[[  0.       0.    ]
+ [  0.       0.    ]
+ [  0.       0.    ]
+ [  2.       0.    ]
+ [  0.       0.    ]
+ [  0.     108.6957]]
+
+Q matrix:
+[[ 80.   0.   0.   0.   0.   0.]
+ [  0.  15.   0.   0.   0.   0.]
+ [  0.   0. 120.   0.   0.   0.]
+ [  0.   0.   0.  20.   0.   0.]
+ [  0.   0.   0.   0. 600.   0.]
+ [  0.   0.   0.   0.   0.  40.]]
+
+R matrix:
+[[1. 0.]
+ [0. 2.]]
+
+LQR gain K:
+[[-0.     -0.     10.9545  5.5637  0.      0.    ]
+ [-6.3246 -6.8019  0.      0.     30.0645  4.5336]]
+
+Riccati solution P:
+[[ 86.0376  38.7655  -0.      -0.     -57.3455  -0.1164]
+ [ 38.7655  35.8455  -0.      -0.     -61.5571  -0.1252]
+ [ -0.      -0.      60.947    5.4772   0.       0.    ]
+ [ -0.      -0.       5.4772   2.7818   0.       0.    ]
+ [-57.3455 -61.5571   0.       0.     271.3709   0.5532]
+ [ -0.1164  -0.1252   0.       0.       0.5532   0.0834]]
+
+Closed-loop eigenvalues of A-BK:
+[-486.0863+0.j       -3.6577+0.j       -1.5173+1.2211j   -1.5173-1.2211j
+   -2.5561+0.j       -8.5713+0.j    ]
+
+Hover stabilization metrics (nonlinear plant):
+  settling_x_s: 1.9700
+  settling_z_s: 1.1200
+  settling_theta_s: 1.9600
+  peak_abs_theta_deg: 6.0904
+  peak_abs_xdot_mps: 0.3111
+  peak_abs_zdot_mps: 0.3800
+  peak_u1_N: 7.0872
+  peak_abs_u2_N: 0.7183
+  peak_f1_N: 3.4330
+  peak_f2_N: 3.9028
+  min_f1_N: 2.3128
+  min_f2_N: 2.3136
+
+Setpoint tracking metrics (nonlinear plant):
+  settling_x_s_after_step: 2.2700
+  settling_z_s_after_step: 1.6900
+  overshoot_x_percent: 1.6129
+  overshoot_z_percent: 0.0000
+  peak_abs_theta_deg_after_step: 7.6259
+  peak_u1_N_after_step: 14.7674
+  peak_abs_u2_N_after_step: 5.2326
+  peak_f1_N_after_step: 10.0000
+  peak_f2_N_after_step: 7.3671
