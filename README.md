@@ -142,7 +142,7 @@ All eigenvalues have negative real parts ⇒ the system is **stable**.
 - **Gravity (g):** 9.81 m/s²  
 - **Maximum Thrust (fmax):** 10 N  
 
-[View Full Report](results_part3/summary.txt)
+[View Full Report](results_part3/part3_summary.txt)
 
 ---
 
