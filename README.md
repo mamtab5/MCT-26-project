@@ -28,14 +28,12 @@ Initial analysis revealed that the **open-loop system is unstable**, motivating 
 ### Degrees of Freedom
 
 * Position: x, z
-* Orientation: θ 
+* Orientation: θ (anti clockwise from positive z axis)
 
 ### Control Inputs
 
 * Total thrust
-* Roll torque
-* Pitch torque
-* Yaw torque
+* Differential thrust
 
 ---
 
@@ -120,7 +118,7 @@ Generated outputs include:
 | -8.5713   | 0.0000 |
 
 ### Stability Analysis
-All eigenvalues have negative real parts ⇒ the system is **stable**.
+All eigenvalues have negative real parts; the system is **stable**.
 
 ## K Gain Matrix
 
@@ -143,6 +141,18 @@ All eigenvalues have negative real parts ⇒ the system is **stable**.
 - **Maximum Thrust (fmax):** 10 N  
 
 [View Full Report](./MCT_Project/Closed%20Loop%20Control/results_part3/part3_summary.txt)
+
+---
+
+## Key Features
+
+* Open-loop system is **unstable**
+* Closed-loop control significantly improves:
+
+  * Stability - Stable hover using LQR 
+  * Tracking performance - Low overshoot tracking  
+* System is **fully controllable** despite fewer inputs than DOFs - Efficient control effort
+* Works on nonlinear system
 
 ---
 
@@ -182,18 +192,6 @@ python code.py
 
 * Generated plots will appear in `figures_part3/`
 * Numerical results stored in `results_part3/`
-
----
-
-## Key Features
-
-* Open-loop system is **unstable**
-* Closed-loop control significantly improves:
-
-  * Stability - Stable hover using LQR 
-  * Tracking performance - Low overshoot tracking  
-* System is **fully controllable** despite fewer inputs than DOFs - Efficient control effort
-* Works on nonlinear system
 
 ---
 
